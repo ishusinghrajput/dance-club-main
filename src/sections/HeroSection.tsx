@@ -182,7 +182,7 @@ const HeroSection = () => {
                       <motion.span
                         className="block font-bold uppercase mobile-only-glow"
                         style={{
-                          fontFamily: "Google Sans",
+                          fontFamily: "Roboto Condensed",
                             fontSize: '23px',
                           //fontSize: 'clamp(0.95rem, 2.8vw, 2rem)',
                           lineHeight: 1,
