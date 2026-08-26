@@ -115,24 +115,6 @@ body {
   font-style: normal;
 }
 
-
-.google-sans-<uniquifier> {
-  font-family: "Google Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings:
-    "GRAD" 0;
-}
-
-
-.roboto-condensed-<uniquifier> {
-  font-family: "Roboto Condensed", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: italic;
-}
-
 .boldonse-regular {
   font-family: "Boldonse", system-ui;
   font-weight: 400;
