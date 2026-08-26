@@ -144,60 +144,7 @@ const HeroSection = () => {
           <div className="w-full px-8 sm:px-10 md:px-16 lg:px-20 xl:px-24 py-10 sm:py-14 lg:py-0">
             <div className="mx-auto flex w-full max-w-7xl justify-end">
               <div className="w-full max-w-[820px] ml-auto text-center md:text-right lg:pl-2 xl:pl-10 px-2 sm:px-4 mt-28 md:mt-0">
-                {/* Primary heading */}
-                <h1 className="mb-3 sm:mb-4 lg:mb-5 w-full">
-                  {HEADING_PRIMARY.map((line, i) => (
-                    <span key={line} className="block overflow-hidden">
-                      <motion.span
-                        className="block font-bold uppercase text-white text-center md:text-right mobile-only-glow"
-                          style={{
-                            fontSize: 'clamp(2.8rem, 8.5vw, 7.2rem)',
-                            lineHeight: 0.9,
-                            letterSpacing: '-0.035em',
-                            width: '100%',
-                            maxWidth: '100%',
-                            textShadow: '0 10px 30px rgba(0,0,0,0.6)'
-                          }}
-                        initial={{ y: '110%' }}
-                        animate={{ y: 0 }}
-                        transition={{
-                          delay: 0.4 + i * 0.14,
-                          duration: 0.7,
-                          ease,
-                        }}
-                      >
-                        {line}
-                      </motion.span>
-                    </span>
-                  ))}
-                </h1>
-
-                {/* Secondary heading */}
-                <div className="flex flex-col items-center md:items-end w-full">
-                  {HEADING_SECONDARY.map((line, i) => (
-                    <span key={line} className="block overflow-hidden">
-                      <motion.span
-                        className="block font-bold uppercase mobile-only-glow"
-                        style={{
-                          fontSize: 'clamp(0.95rem, 2.8vw, 2rem)',
-                          lineHeight: 1,
-                          letterSpacing: '0.05em',
-                          color: '#7c3aed',
-                          textShadow: '0 6px 18px rgba(0,0,0,0.45)'
-                        }}
-                        initial={{ y: '110%' }}
-                        animate={{ y: 0 }}
-                        transition={{
-                          delay: 0.8 + i * 0.14,
-                          duration: 0.7,
-                          ease,
-                        }}
-                      >
-                        {line}
-                      </motion.span>
-                    </span>
-                  ))}
-                </div>
+                
               </div>
             </div>
           </div>
@@ -299,3 +246,67 @@ const HeroSection = () => {
 }
 
 export default HeroSection
+
+
+
+
+{/* Primary heading */}
+                <h1 className="mb-3 sm:mb-4 lg:mb-5 w-full">
+                  {HEADING_PRIMARY.map((line, i) => (
+                    <span key={line} className="block overflow-hidden">
+                      <motion.span
+                        className="block font-bold uppercase text-white text-center mobile-only-glow"
+                          style={{
+                            fontFamily: "Google Sans",
+                            //fontSize: '70px',
+                            fontSize: 'clamp(1.5rem, 5.6vw, 5.5rem)',
+                            lineHeight: 0.9,
+                            letterSpacing: '-0.035em',
+                            width: '100%',
+                            maxWidth: '100%',
+                            textShadow: '0 10px 30px rgba(0,0,0,0.6)'
+                          }}
+                        initial={{ y: '110%' }}
+                        animate={{ y: 0 }}
+                        transition={{
+                          delay: 0.4 + i * 0.14,
+                          duration: 0.7,
+                          ease,
+                        }}
+                      >
+                        {line}
+                      </motion.span>
+                    </span>
+                  ))}
+                </h1>
+
+                {/* Secondary heading */}
+                <div className="flex flex-col items-center w-full">
+                  {HEADING_SECONDARY.map((line, i) => (
+                    <span key={line} className="block overflow-hidden">
+                      <motion.span
+                        className="block font-bold uppercase mobile-only-glow"
+                        style={{
+                          fontFamily: "boldonse",
+                            //fontSize: '23px',
+                            height: '70px',
+                            marginTop: '10px',
+                          fontSize: 'clamp(0.5rem, 1.9vw, 1.1rem)',
+                          lineHeight: 1,
+                          letterSpacing: '0.05em',
+                          color: '#7c3aed',
+                          textShadow: '0 6px 18px rgba(0,0,0,0.45)'
+                        }}
+                        initial={{ y: '110%' }}
+                        animate={{ y: 0 }}
+                        transition={{
+                          delay: 0.8 + i * 0.14,
+                          duration: 0.7,
+                          ease,
+                        }}
+                      >
+                        {line}
+                      </motion.span>
+                    </span>
+                  ))}
+                </div>

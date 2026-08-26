@@ -4,7 +4,6 @@ import FadeIn from '../components/FadeIn'
 import LiveProjectButton from '../components/LiveProjectButton'
 import modelImage from '../../model.png'
 import project1 from '../../project1.jpg'
-import project2 from '../../project2.jpg'
 
 const projects = [
   {

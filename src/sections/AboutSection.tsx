@@ -1,9 +1,13 @@
 import FadeIn from '../components/FadeIn'
 import AnimatedText from '../components/AnimatedText'
 import ContactButton from '../components/ContactButton'
-import modelImage from '../../model.png'
-import project1 from '../../project1.jpg'
-import project2 from '../../project2.jpg'
+
+import element1 from '../../element1.png'
+import element2 from '../../element2.png'
+import element4 from '../../element4.png'
+//import element5 from '../../element5.png'
+import element6 from '../../element6.png'
+
 
 const AboutSection = () => {
   return (
@@ -14,17 +18,17 @@ const AboutSection = () => {
     >
       {/* Content */}
       <div className="relative w-full max-w-5xl mx-auto min-h-[320px] md:min-h-[420px]">
-        <div className="absolute left-0 top-0 hidden md:block w-24 h-24 xl:w-32 xl:h-32 rounded-[24px] border border-white/10 bg-[#111] p-2 shadow-[0_20px_45px_rgba(0,0,0,0.35)] rotate-[-8deg] overflow-hidden">
-          <img src={project1} alt="3D element" className="h-full w-full object-cover rounded-[18px]" />
+        <div className="absolute left-0 top-0 hidden md:block w-30 h-30 xl:w-32 xl:h-32   rotate-[-8deg] overflow-hidden">
+          <img src={element1} alt="3D element" className="h-full w-full  " />
         </div>
-        <div className="absolute right-0 top-0 hidden md:block w-24 h-24 xl:w-32 xl:h-32 rounded-[24px] border border-white/10 bg-[#111] p-2 shadow-[0_20px_45px_rgba(0,0,0,0.35)] rotate-[8deg] overflow-hidden">
-          <img src={project2} alt="3D element" className="h-full w-full object-cover rounded-[18px]" />
+        <div className="absolute right-0 top-0 hidden md:block w-24 h-24 xl:w-32 xl:h-32  rotate-[8deg] overflow-hidden">
+          <img src={element2} alt="3D element" className="h-full w-full " />
         </div>
-        <div className="absolute left-0 bottom-0 hidden md:block w-24 h-24 xl:w-32 xl:h-32 rounded-[24px] border border-white/10 bg-[#111] p-2 shadow-[0_20px_45px_rgba(0,0,0,0.35)] rotate-[7deg] overflow-hidden">
-          <img src={modelImage} alt="3D element" className="h-full w-full object-cover rounded-[18px]" />
+        <div className="absolute left-0 bottom-0 hidden md:block w-24 h-24 xl:w-32 xl:h-32  rotate-[7deg] overflow-hidden">
+          <img src={element6} alt="3D element" className="h-full w-full " />
         </div>
-        <div className="absolute right-0 bottom-0 hidden md:block w-24 h-24 xl:w-32 xl:h-32 rounded-[24px] border border-white/10 bg-[#111] p-2 shadow-[0_20px_45px_rgba(0,0,0,0.35)] rotate-[-6deg] overflow-hidden">
-          <img src={modelImage} alt="3D element" className="h-full w-full object-cover rounded-[18px]" />
+        <div className="absolute right-0 bottom-0 hidden md:block w-29 h-24 xl:w-36 xl:h-32  rotate-[-6deg] overflow-hidden">
+          <img src={element4} alt="3D element" className="h-full w-full " />
         </div>
 
         <div className="relative z-10 flex flex-col items-center gap-6 md:gap-10 w-full max-w-3xl mx-auto">

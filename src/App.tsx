@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import ParticlesCanvas from './components/ParticlesCanvas'
 import HeroSection from './sections/HeroSection'
 import AboutSection from './sections/AboutSection'
 import ServicesSection from './sections/ServicesSection'
@@ -9,21 +10,34 @@ import ContactPage from './pages/ContactPage'
 
 function Home() {
   return (
-    <main
-      style={{
-        position: 'relative',
-        zIndex: 5,
-        overflowX: 'clip',
-        backgroundColor: '#000',
-      }}
-    >
-      <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <ProjectsSection />
-      <NewsSection />
-      <FooterSection />
-    </main>
+    <div style={{ position: 'relative', backgroundColor: '#000', overflow: 'hidden' }}>
+      <div
+        style={{
+          position: 'fixed',
+          inset: 0,
+          zIndex: 0,
+          pointerEvents: 'none',
+        }}
+      >
+        <ParticlesCanvas />
+      </div>
+
+      <main
+        style={{
+          position: 'relative',
+          zIndex: 1,
+          overflowX: 'clip',
+          backgroundColor: 'transparent',
+        }}
+      >
+        <HeroSection />
+        <AboutSection />
+        <ServicesSection />
+        <ProjectsSection />
+        <NewsSection />
+        <FooterSection />
+      </main>
+    </div>
   )
 }
 

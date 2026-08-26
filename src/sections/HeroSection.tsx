@@ -6,7 +6,7 @@ import logo from '../../logo.png'
 
 
 const VIDEO_URL =
-  '/video2.mp4'
+  '/stars2.mp4'
 
 const ACCENT = '#5E0ED7'
 
@@ -50,7 +50,7 @@ const HeroSection = () => {
 
       {/* ─── background video (centered and filling the hero) ─── */}
       <video
-        className="hidden md:block absolute inset-0 z-[1] h-full w-full"
+        className="absolute inset-0 z-[1] h-full w-full block"
         src={VIDEO_URL}
         autoPlay
         loop
@@ -85,7 +85,7 @@ const HeroSection = () => {
             custom={0}
             className="absolute left-6 md:relative ml-2 sm:ml-4 md:ml-6 flex-shrink-0"
           >
-            <img src={logo} alt="Logo" className="h-12 w-auto sm:h-14 md:h-16" />
+            <img src={logo} alt="Logo" className="h-9 w-auto sm:h-10 md:h-12" />
           </motion.div>
 
           {/* center nav links – hidden on mobile */}
@@ -150,11 +150,10 @@ const HeroSection = () => {
                   {HEADING_PRIMARY.map((line, i) => (
                     <span key={line} className="block overflow-hidden">
                       <motion.span
-                        className="block font-bold uppercase text-white text-center mobile-only-glow"
+                        className="block font-bold uppercase text-white text-center md:text-right mobile-only-glow"
                           style={{
                             fontFamily: "Google Sans",
-                            fontSize: '70px',
-                            //fontSize: 'clamp(2.8rem, 8.5vw, 7.2rem)',
+                            fontSize: 'clamp(1.9rem, 6.9vw, 5.5rem)',
                             lineHeight: 0.9,
                             letterSpacing: '-0.035em',
                             width: '100%',
@@ -176,15 +175,16 @@ const HeroSection = () => {
                 </h1>
 
                 {/* Secondary heading */}
-                <div className="flex flex-col items-center w-full">
+                <div className="flex flex-col items-center md:items-end w-full">
                   {HEADING_SECONDARY.map((line, i) => (
                     <span key={line} className="block overflow-hidden">
                       <motion.span
                         className="block font-bold uppercase mobile-only-glow"
                         style={{
-                          fontFamily: "Roboto Condensed",
-                            fontSize: '23px',
-                          //fontSize: 'clamp(0.95rem, 2.8vw, 2rem)',
+                          fontFamily: "boldonse",
+                          height: '70px',
+                          marginTop: '15px',
+                          fontSize: 'clamp(0.75rem, 2.1vw, 1.5rem)',
                           lineHeight: 1,
                           letterSpacing: '0.05em',
                           color: '#7c3aed',
