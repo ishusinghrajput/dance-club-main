@@ -17,7 +17,7 @@ const AboutSection = () => {
     >
       {/* Content */}
       <div className="relative w-full max-w-5xl mx-auto min-h-[320px] md:min-h-[420px]">
-        <div className="absolute left-0 top-0 hidden md:block w-30 h-30 xl:w-32 xl:h-32   rotate-[-8deg] overflow-hidden">
+        <div className="absolute left-0 top-0 hidden md:block w-24 h-24 xl:w-32 xl:h-32   rotate-[-8deg] overflow-hidden">
           <img src={element1} alt="3D element" className="h-full w-full  " />
         </div>
         <div className="absolute right-0 top-0 hidden md:block w-24 h-24 xl:w-32 xl:h-32  rotate-[8deg] overflow-hidden">
