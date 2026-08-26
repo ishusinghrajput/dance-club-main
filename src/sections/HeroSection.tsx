@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowUpRight, X } from 'lucide-react'
@@ -35,6 +35,28 @@ const fadeDown = {
 
 const HeroSection = () => {
   const [menuOpen, setMenuOpen] = useState(false)
+  const videoRef = useRef<HTMLVideoElement | null>(null)
+
+  useEffect(() => {
+    const v = videoRef.current
+    if (!v) return
+
+    // Ensure video is muted and marked for inline playback on iOS/Android
+    try {
+      v.muted = true
+      v.setAttribute('playsinline', '')
+      v.setAttribute('webkit-playsinline', '')
+      // Try to start playback programmatically; some browsers allow this when muted
+      const playPromise = v.play()
+      if (playPromise && typeof playPromise.catch === 'function') {
+        playPromise.catch(() => {
+          // swallow the rejection — autoplay may still be blocked by user settings
+        })
+      }
+    } catch (e) {
+      // ignore
+    }
+  }, [])
 
   return (
     <div
@@ -50,6 +72,8 @@ const HeroSection = () => {
 
       {/* ─── background video (centered and filling the hero) ─── */}
       <video
+        ref={videoRef}
+        crossOrigin="anonymous"
         className="absolute inset-0 z-[1] h-full w-full block"
         src={VIDEO_URL}
         autoPlay
