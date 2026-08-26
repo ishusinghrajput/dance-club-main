@@ -5,8 +5,7 @@ import ContactButton from '../components/ContactButton'
 import element1 from '../../element1.png'
 import element2 from '../../element2.png'
 import element4 from '../../element4.png'
-//import element5 from '../../element5.png'
-import element6 from '../../element6.png'
+import element3 from '../../element3.png'
 
 
 const AboutSection = () => {
@@ -25,7 +24,7 @@ const AboutSection = () => {
           <img src={element2} alt="3D element" className="h-full w-full " />
         </div>
         <div className="absolute left-0 bottom-0 hidden md:block w-24 h-24 xl:w-32 xl:h-32  rotate-[7deg] overflow-hidden">
-          <img src={element6} alt="3D element" className="h-full w-full " />
+          <img src={element3} alt="3D element" className="h-full w-full " />
         </div>
         <div className="absolute right-0 bottom-0 hidden md:block w-29 h-24 xl:w-36 xl:h-32  rotate-[-6deg] overflow-hidden">
           <img src={element4} alt="3D element" className="h-full w-full " />
