@@ -4,7 +4,11 @@ import { motion } from 'framer-motion'
 import { ArrowUpRight, X } from 'lucide-react'
 import logo from '../../logo.png'
 
+//THIS HERO SECTION HAS INDIVIDUAL BACKGROUND VIDEO.
 
+
+const VIDEO_URL =
+  '/stars2.mp4'
 
 const ACCENT = '#5E0ED7'
 
@@ -61,11 +65,39 @@ const HeroSection = () => {
       className="relative min-h-screen flex flex-col overflow-hidden"
       style={{
         fontFamily: "'Inter', sans-serif",
-        //backgroundColor: '#000',
+        backgroundColor: '#000',
         minHeight: '100vh',
       }}
     >
-      
+      {/* ─── black hero background ─── */}
+      <div className="absolute inset-0 z-0" style={{ backgroundColor: '#000' }} />
+
+      {/* ─── background video (centered and filling the hero) ─── */}
+      <video
+        ref={videoRef}
+        crossOrigin="anonymous"
+        className="absolute inset-0 z-[1] h-full w-full block"
+        src={VIDEO_URL}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        style={{
+          backgroundColor: '#000',
+          objectFit: 'cover',
+          objectPosition: 'center',
+          opacity: 1,
+          clipPath: 'inset(0 0 6% 0 round 0px)',
+          WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%)',
+          maskImage: 'linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%)',
+        }}
+      />
+      {/* subtle dark overlay to increase contrast and hide video edge */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{ backgroundColor: 'rgba(0,0,0,0.18)', zIndex: 2 }}
+      />
 
       {/* ─── content layer ─── */}
       <div className="relative z-10 flex flex-col min-h-screen">
