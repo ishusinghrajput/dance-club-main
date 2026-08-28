@@ -52,7 +52,6 @@ const VideoBackground: React.FC<Props> = ({
       ref={ref}
       src={src}
       poster={poster}
-      crossOrigin={crossOrigin}
       className={className}
       style={style}
       loop={loop}
