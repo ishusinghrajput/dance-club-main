@@ -4,7 +4,7 @@ const FooterSection = () => {
   return (
     <footer
       className="px-5 sm:px-8 md:px-10 py-24 sm:py-32 md:py-40"
-      style={{ background: '#0C0C0C', borderTop: '1px solid rgba(215, 226, 234, 0.1)' }}
+      style={{ /*background: '#0C0C0C',*/ borderTop: '1px solid rgba(215, 226, 234, 0.1)' }}
     >
       <div className="max-w-7xl mx-auto">
         {/* Philosophy Section */}

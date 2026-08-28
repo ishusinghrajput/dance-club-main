@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ParticlesCanvas from './components/ParticlesCanvas'
+import VideoBackground from './components/VideoBackground.tsx'
 import HeroSection from './sections/HeroSection'
 import AboutSection from './sections/AboutSection'
 import ServicesSection from './sections/ServicesSection'
@@ -19,7 +20,16 @@ function Home() {
           pointerEvents: 'none',
         }}
       >
-        <ParticlesCanvas />
+        <VideoBackground
+          src="/stars2.mp4"
+          className="absolute inset-0 h-full w-full"
+          crossOrigin="anonymous"
+          style={{ objectFit: 'cover' }}
+        />
+
+        <div style={{ position: 'absolute', inset: 0, zIndex: 1 }}>
+          <ParticlesCanvas />
+        </div>
       </div>
 
       <main

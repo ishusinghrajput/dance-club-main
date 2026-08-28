@@ -29,7 +29,7 @@ const NewsSection = () => {
     <section
       id="news"
       className="px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32 relative"
-      style={{ background: '#0C0C0C' }}
+      //style={{ background: '#0C0C0C' }}
     >
       <div className="mx-auto flex max-w-7xl flex-col gap-10">
         <FadeIn delay={0} y={30}>

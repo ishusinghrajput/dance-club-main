@@ -205,7 +205,7 @@ const HeroSection = () => {
                       <motion.span
                         className="block font-bold uppercase mobile-only-glow"
                         style={{
-                          fontFamily: "boldonse",
+                          fontFamily: "special elite",
                           height: '70px',
                           marginTop: '15px',
                           fontSize: 'clamp(0.75rem, 2.1vw, 1.5rem)',

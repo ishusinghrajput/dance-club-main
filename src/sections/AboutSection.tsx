@@ -13,7 +13,7 @@ const AboutSection = () => {
     <section
       id="about"
       className="min-h-screen flex flex-col items-center justify-center px-5 sm:px-8 md:px-10 py-20 relative"
-      style={{ background: '#000' }}
+      //style={{ background: '#000' }}
     >
       {/* Content */}
       <div className="relative w-full max-w-5xl mx-auto min-h-[320px] md:min-h-[420px]">
